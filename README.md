@@ -158,6 +158,13 @@ There is no official way to learn that a record's `sync_status` changed other th
 registration (`Uhome.Configure` / `Set`, a URL plus a secret you choose) may cover device state; it was not
 tested for these notes.
 
+## Related: lock shows Online but cloud keeps dropping
+
+If `st.healthCheck` flips between `Online` and `Offline`, writes stay at `sync_status: 0`, or the vendor app shows
+*Cloud Status: Disconnected* while Wi‑Fi signal is good, check the network before the API. On an ASUS AiMesh
+setup the cause was the lock roaming between access points; see
+[wifi-aimesh-roaming.md](wifi-aimesh-roaming.md).
+
 ## Sources
 
 Official documentation: <https://doc.api.u-tec.com/> and the article set at <https://developer.xthings.com/>
